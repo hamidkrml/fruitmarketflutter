@@ -3,6 +3,10 @@ import 'package:fruitmarketflutter/common/color_extension.dart';
 import 'package:fruitmarketflutter/common/globls.dart';
 import 'package:fruitmarketflutter/screnn/login/splash_login.dart';
 
+void main() {
+  runApp(const Main());
+}
+
 class Main extends StatelessWidget {
   const Main({super.key});
 
@@ -16,7 +20,6 @@ class Main extends StatelessWidget {
         useMaterial3: true,
         appBarTheme: AppBarTheme(color: ColorExtension.primary, elevation: 0),
       ),
-
       home: const splashLogin(),
     );
   }
