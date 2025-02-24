@@ -97,6 +97,8 @@ class _OnboardingScrennState extends State<OnboardingScrenn> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
+                Spacer(),
+                Spacer(),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children:
@@ -106,6 +108,7 @@ class _OnboardingScrennState extends State<OnboardingScrenn> {
                         return Container(
                           width: 9,
                           height: 9,
+                          margin: EdgeInsets.symmetric(horizontal: 4),
                           decoration: BoxDecoration(
                             color:
                                 selecetpage == index
@@ -119,6 +122,27 @@ class _OnboardingScrennState extends State<OnboardingScrenn> {
                           ),
                         );
                       }).toList(),
+                ),
+                SizedBox(height: context.width * 0.25),
+                InkWell(
+                  onTap: () {},
+                  child: Container(
+                    width: 100,
+                    height: 50,
+                    decoration: BoxDecoration(
+                      color: ColorExtension.primary,
+                      borderRadius: BorderRadius.circular(5),
+                    ),
+                    alignment: Alignment.center,
+                    child: Text(
+                      'next',
+                      style: TextStyle(
+                        color: ColorExtension.bg,
+                        fontSize: 14,
+                        fontWeight: FontWeight.w500,
+                      ),
+                    ),
+                  ),
                 ),
               ],
             ),
