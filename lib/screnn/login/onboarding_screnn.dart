@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:fruitmarketflutter/common/color_extension.dart';
 import 'package:fruitmarketflutter/common/common_extension.dart';
+import 'package:fruitmarketflutter/common_widgets/round_button.dart';
 
 class OnboardingScrenn extends StatefulWidget {
   const OnboardingScrenn({super.key});
@@ -124,26 +126,13 @@ class _OnboardingScrennState extends State<OnboardingScrenn> {
                       }).toList(),
                 ),
                 SizedBox(height: context.width * 0.25),
-                InkWell(
-                  onTap: () {},
-                  child: Container(
-                    width: 100,
-                    height: 50,
-                    decoration: BoxDecoration(
-                      color: ColorExtension.primary,
-                      borderRadius: BorderRadius.circular(5),
-                    ),
-                    alignment: Alignment.center,
-                    child: Text(
-                      'next',
-                      style: TextStyle(
-                        color: ColorExtension.bg,
-                        fontSize: 14,
-                        fontWeight: FontWeight.w500,
-                      ),
-                    ),
-                  ),
+                RoundButton(
+                  title:
+                      selecetpage == pageArry.length - 1 ? 'Get Start' : 'next',
+                  width: 150,
+                  onPressed: () {},
                 ),
+                SizedBox(height: context.width * 0.25),
               ],
             ),
           ),
